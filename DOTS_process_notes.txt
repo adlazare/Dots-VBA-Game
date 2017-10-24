@@ -1,0 +1,48 @@
+Guide on creating DOTS game:
+
+First step: Create the GUI (Graphical User Interface)
+
+	> Needs 4 separate screens
+
+		>> Welcome Screen
+
+		>> Game Setup Screen
+
+		>> Game Result Screen
+
+		>> Report Screen
+
+	> Needs Navigation tabs (File, Help, etc.)
+
+Notes on combo boxes:
+	> These are a bit trickier than expected. Created a 2nd sheet called 'Lists'
+	  and made a list for each combo box. Then click on the combobox in the VBA section
+	  & go to 'RowSource' & type in 'Lists!<cell>:<cell>' for the range containing the values
+
+
+Next Challenge: Format the DOTS board by change cell colors & creating a range dynamically
+
+	> First Steps:
+		>> Define variables that will store the input for each option on the setup screen
+		>> Go to Formulas -> Name Manager & define a new name called DataStart
+
+	DONE!
+
+Functionality added 10.21:
+	> Added names: can take input & output it onto the game board
+			>> Define Cell Names in the Name Manager under the Formulas tab
+			>> Select a range & set it to the created Name variable
+
+Next Challenge: Create Game Manager Module
+
+	> Need to figure out how to create the basic loop that runs the game &
+		what the flow of the program should look like. The most basic first step
+		I can think of is alternating player turns.
+
+	> Re-doing my approach to the Game Board
+			>> Use cells as dots! Duh! Borders are stupid
+			>> Column Width for Dot cells = 1 & Row Height = 10
+					>>> Should be able to programatically set those format values
+			>> Select the ranges with the dots - For the vertical ranges add border on left & right
+			>> For Horizontal range add Upper & Lower borders
+			
